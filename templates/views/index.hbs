@@ -14,14 +14,16 @@
     <script>
         const city = require('js/cities.js');
         cities = city.array
-        autocomplete(document.getElementById("cityName"), cities);
+        autocomplete(document.getElementById("myInput"), cities);
     </script>
     <div class="main-content">
         {{>header}}
         <p>Use this to get your weather</p>
 
-        <form>
-            <input placeholder="Location" name="cityName"> <button>Search</button>
+        <form autocomplete="off">
+            <div class="autocomplete">
+                <input placeholder="Location" id="myInput" type="text" name="myCity"> <button>Search</button>
+            </div>
         </form>
 
         <p id="message-1"></p>
