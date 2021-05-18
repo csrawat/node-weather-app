@@ -12,7 +12,9 @@
 
 <body>
     <script>
-        autocomplete(document.getElementById("cityName"), countries);
+        const city = require('js/cities.js');
+        cities = city.array
+        autocomplete(document.getElementById("cityName"), cities);
     </script>
     <div class="main-content">
         {{>header}}
