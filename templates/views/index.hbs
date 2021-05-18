@@ -7,15 +7,19 @@
     <title>Weather</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/util.js"></script>
 </head>
 
 <body>
+    <script>
+        autocomplete(document.getElementById("cityName"), countries);
+    </script>
     <div class="main-content">
         {{>header}}
         <p>Use this to get your weather</p>
 
         <form>
-            <input placeholder="Location"> <button>Search</button>
+            <input placeholder="Location" name="cityName"> <button>Search</button>
         </form>
 
         <p id="message-1"></p>
